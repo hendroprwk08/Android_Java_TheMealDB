@@ -1,6 +1,7 @@
 package com.hendro.android_java_themealdb;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +16,11 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-class DessertAdapter extends RecyclerView.Adapter<DessertAdapter.GridViewHolder> {
+class MyAdapter extends RecyclerView.Adapter<MyAdapter.GridViewHolder> {
     private List<Meal> meals;
     private Context context;
 
-    public DessertAdapter(Context context, List<Meal> meals) {
+    public MyAdapter(Context context, List<Meal> meals) {
         this.meals = meals;
         this.context = context;
     }
@@ -48,7 +49,10 @@ class DessertAdapter extends RecyclerView.Adapter<DessertAdapter.GridViewHolder>
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, meal, Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(context, DetailActivity.class);
+                i.putExtra("i_idMeal", id);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(i);
             }
         });
     }
