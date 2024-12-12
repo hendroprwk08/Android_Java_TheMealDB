@@ -5,6 +5,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         // beri listener pada saat item/menu bottomnavigation terpilih
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        bottomNavigationView.setItemIconTintList(ColorStateList.valueOf(Color.parseColor("#fafafa")));
     }
 
     private boolean loadFragment(Fragment fragment) {
