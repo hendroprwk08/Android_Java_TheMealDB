@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_seafood"
+        android:icon="@drawable/baseline_cloud_24"
+        android:title="Seafood" />
+
+    <item
+        android:id="@+id/action_dessert"
+        android:icon="@drawable/baseline_cookie_24"
+        android:title="Dessert" />
+    <item
+        android:id="@+id/action_vegan"
+        android:icon="@drawable/baseline_compost_24"
+        android:title="Vegan" />
+
+</menu>
